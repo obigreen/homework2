@@ -1,24 +1,51 @@
 .sidebar {
+    :root {
+        --font-family: "Montserrat", sans-serif;
+    }
+    position: absolute;
+    z-index: 999;
+    display: none;
 }
 
 .sidebar.open {
+    width: 317px;
+    height: 100%;
+    box-shadow: 0 1px 2px 0 rgba(29, 33, 38, 0.1), 0 10px 40px 0 rgba(29, 33, 38, 0.13);
+    display: block;
+    background: #fff;
 }
 
 .background {
+    background: #fff;
 }
 
 .nav {
+    margin-left: 70px;
 }
 
 .nav a {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 22px;
+    color: #000;
+    display: block;
+    margin-bottom: 45px;
 }
 
 .nav a:hover {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #0059b2;
 }
 
 .nav a.active {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #0059b2;
 }
 .close {
+    border: none;
+    background: none;
 }
 
 .close img {
