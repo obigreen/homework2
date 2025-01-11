@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import SuperEditableSpan from './common/c4-SuperEditableSpan/SuperEditableSpan'
-import { restoreState, saveState } from './localStorage/localStorage'
+import {restoreState, saveState} from './localStorage/localStorage'
 import s2 from '../../s1-main/App.module.css'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import s from './HW6.module.css'
@@ -13,13 +13,20 @@ import s from './HW6.module.css'
 
 const HW6 = () => {
     const [value, setValue] = useState<string>('')
+    const [error, setError] = useState<string | null>(null)
 
     const save = () => {
-        saveState<string>('hw6-editable-span-value', value)
+        const trimmedValue = value.trim()
+        if (trimmedValue !== '') {
+            saveState<string>('hw6-editable-span-value', value)
+            setError(null)
+        } else {
+            setError('Поле не может быть пустым')
+        }
+
     }
     const restore = () => {
-        // делают студенты
-
+        setValue(restoreState('hw6-editable-span-value', value))
     }
 
     return (
@@ -32,11 +39,15 @@ const HW6 = () => {
                     <SuperEditableSpan
                         id={'hw6-spanable-input'}
                         value={value}
-                        onChangeText={setValue}
+                        onChangeText={(newValue) => {
+                            setValue(newValue);
+                            setError(null);
+                        }}
                         spanProps={{
                             id: 'hw6-editable-span',
-                            defaultText: 'enter text...',
+                            defaultText: 'Edit text',
                         }}
+                        error={error}
                     />
                 </div>
 

@@ -1,3 +1,7 @@
+:root {
+    --font-family: "Montserrat", sans-serif;
+}
+
 .input:focus {
 }
 
@@ -9,9 +13,11 @@
 }
 
 .inputWrapper {
+
 }
 
 .superInput {
+
 }
 
 .errorInput {

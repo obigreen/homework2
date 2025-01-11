@@ -1,6 +1,6 @@
 .button {
     border-radius: 3px;
-    padding: 5px 24px;
+    padding: 5px 0;
     width: 129px;
     height: 30px;
     font-family: var(--font-family);
@@ -9,6 +9,9 @@
     line-height: 143%;
     color: #fff;
     border: none;
+    cursor: pointer;
+
+
 }
 
 .disabled {
@@ -19,9 +22,14 @@
 .secondary {
     border: 1px solid #06c;
     border-radius: 3px;
-    padding: 5px 24px;
-    width: 176px;
+    padding: 5px 0;
+    width: 119px;
     height: 30px;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 143%;
+    color: #06c;
 }
 
 .default {
@@ -33,7 +41,7 @@
 }
 
 .default:hover {
-    width: 176px;
+
 }
 
 .red:hover {
