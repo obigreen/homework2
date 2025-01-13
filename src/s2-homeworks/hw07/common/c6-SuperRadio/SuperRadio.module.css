@@ -1,15 +1,38 @@
 .radio {
+    fill: #000;
+    border: 5px solid black;
+
 }
 
 .radio::before {
+
+
 }
 
 
 .radio:checked::before {
+
 }
 
 .label {
+    display: flex;
+    align-items: center;
+}
+
+.label input {
+    margin-right: 11px;
+    border-color: black;
+}
+.label span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
 }

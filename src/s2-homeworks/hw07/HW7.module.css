@@ -1,2 +1,17 @@
+:root {
+    --font-family: "Montserrat", sans-serif;
+}
+
 .container {
+    font-family: var(--font-family);
+    max-width: 403px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.container div:first-child {
+    max-width: 165px;
+    width: 100%;
 }
