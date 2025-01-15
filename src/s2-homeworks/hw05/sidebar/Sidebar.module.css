@@ -10,7 +10,7 @@
 .sidebar.open {
     width: 317px;
     height: 100%;
-    box-shadow: 0 1px 2px 0 rgba(29, 33, 38, 0.1), 0 10px 40px 0 rgba(29, 33, 38, 0.13);
+    box-shadow: 2px 0 2px 0 rgba(29, 33, 38, 0.1), 9px 1px 6px 0 rgba(29, 33, 38, 0.13);
     display: block;
     background: #fff;
 }
